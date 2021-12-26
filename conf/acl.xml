@@ -1,0 +1,6 @@
+<include>
+    <network-lists>
+        <list name="domains" default="deny">
+        </list>
+    </network-lists>
+</include>

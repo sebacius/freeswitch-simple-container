@@ -1,0 +1,69 @@
+<document type="freeswitch/xml">
+    <X-PRE-PROCESS cmd="include" data="vars.xml"/>
+
+    <section name="configuration" description="Various Configuration">
+
+        <configuration name="modules.conf" description="Modules">
+            <X-PRE-PROCESS cmd="include" data="modules.xml"/>
+        </configuration>
+
+        <configuration name="switch.conf" description="Core Configuration">
+            <X-PRE-PROCESS cmd="include" data="switch.xml"/>
+        </configuration>
+
+        <configuration name="console.conf" description="Console Logger">
+            <mappings>
+                <map name="all" value="console,debug,info,notice,warning,err,crit,alert"/>
+            </mappings>
+            <settings>
+                <param name="colorize" value="true"/>
+            </settings>
+        </configuration>
+
+        <configuration name="db.conf" description="LIMIT DB Configuration">
+            <settings>
+            </settings>
+        </configuration>
+
+        <configuration name="acl.conf" description="Network Lists">
+            <X-PRE-PROCESS cmd="include" data="acl.xml"/>
+        </configuration>
+
+        <configuration name="conference.conf" description="Audio Conference">
+            <advertise>
+            </advertise>
+            <caller-controls>
+                <group name="default">
+                </group>
+            </caller-controls>
+            <profiles>
+            </profiles>
+        </configuration>
+
+        <configuration name="event_socket.conf" description="Socket Client">
+            <X-PRE-PROCESS cmd="include" data="eventSocket.xml"/>
+        </configuration>
+
+        <configuration name="sofia.conf" description="sofia Endpoint">
+            <X-PRE-PROCESS cmd="include" data="sofia.xml"/>
+        </configuration>
+
+    </section>
+
+    <section name="dialplan" description="Regex/XML Dialplan">
+        <context name="default">
+            <X-PRE-PROCESS cmd="include" data="dialplan.xml"/>
+        </context>
+    </section>
+
+    <section name="chatplan" description="Regex/XML Chatplan">
+    </section>
+
+    <section name="directory" description="User Directory">
+        <X-PRE-PROCESS cmd="include" data="directory.xml"/>
+    </section>
+
+    <section name="languages" description="Language Management">
+    </section>
+
+</document>

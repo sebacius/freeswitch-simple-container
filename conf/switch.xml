@@ -1,0 +1,19 @@
+<include>
+    <cli-keybindings>
+    </cli-keybindings>
+    <default-ptimes>
+    </default-ptimes>
+    <settings>
+        <param name="colorize-console" value="true"/>
+        <param name="dialplan-timestamps" value="false"/>
+        <param name="max-db-handles" value="50"/>
+        <param name="db-handle-timeout" value="10"/>
+        <param name="max-sessions" value="1000"/>
+        <param name="sessions-per-second" value="30"/>
+        <param name="loglevel" value="debug"/>
+        <param name="mailer-app" value="sendmail"/>
+        <param name="mailer-app-args" value="-t"/>
+        <param name="dump-cores" value="yes"/>
+        <param name="rtp-enable-zrtp" value="false"/>
+    </settings>
+</include>
