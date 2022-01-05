@@ -1,4 +1,4 @@
-# go-dialer
+# Freeswitch Simple Cotainer
 
 Simple dockerized FS
 
